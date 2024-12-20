@@ -1,24 +1,23 @@
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 
-interface Indicator {
+interface Config {
     title?: String;
     subtitle?: String;
     value?: String;
 }
 
-export default function IndicatorWeather(config: Indicator) {
-    return (
+export default function Indicator(config: Config) {
+	return (
         <Paper
             sx={{
-                p: 2,
-                display: 'flex',
-                flexDirection: 'column'
+              p: 2,
+              display: 'flex',
+              flexDirection: 'column'
             }}
-        >
-            <Typography component="h2" variant="h6"
-                color="primary" gutterBottom>
-                {config.title}
+          >
+            <Typography component="h2" variant="h6" color="primary" gutterBottom>
+                {config.title} 
             </Typography>
             <Typography component="p" variant="h4">
                 {config.value}
@@ -26,6 +25,6 @@ export default function IndicatorWeather(config: Indicator) {
             <Typography color="text.secondary" sx={{ flex: 1 }}>
                 {config.subtitle}
             </Typography>
-        </Paper>
+        </Paper> 
     )
 }
