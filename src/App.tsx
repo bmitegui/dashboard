@@ -18,7 +18,6 @@ function App() {
 
   const [indicators, setIndicators] = useState<Indicator[]>([]);
   const [items, setItems] = useState<Item[]>([]);
-  const [charts, setCharts] = useState<Item[]>([]);
   const [selectedVariable, setSelectedVariable] = useState<string>("humidity");
 
   useEffect(() => {
@@ -100,7 +99,6 @@ function App() {
         });
       }
 
-      setCharts(chartsToItem);
     }
 
     request();
